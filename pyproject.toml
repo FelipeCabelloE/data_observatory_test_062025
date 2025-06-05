@@ -29,7 +29,7 @@ requires-python = "~=3.12.0"
 
 
 [tool.ruff]
-line-length = 99
+line-length = 88
 src = ["data_observatory_test_062025"]
 include = ["pyproject.toml", "data_observatory_test_062025/**/*.py"]
 
