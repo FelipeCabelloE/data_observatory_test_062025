@@ -18,6 +18,7 @@ classifiers = [
 dependencies = [
     "jupyterlab>=4.4.3",
     "loguru",
+    "nbautoexport>=0.5.2",
     "pandas>=2.3.0",
     "pip",
     "python-dotenv",
@@ -27,6 +28,10 @@ dependencies = [
 ]
 requires-python = "~=3.12.0"
 
+[tool.pyright]
+venvPath='.'
+venv=".venv"
+exclude=['.venv']
 
 [tool.ruff]
 line-length = 88
