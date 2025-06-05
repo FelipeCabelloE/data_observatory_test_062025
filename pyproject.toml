@@ -16,7 +16,9 @@ classifiers = [
     "License :: OSI Approved :: MIT License"
 ]
 dependencies = [
+    "jupyterlab>=4.4.3",
     "loguru",
+    "pandas>=2.3.0",
     "pip",
     "python-dotenv",
     "ruff",
