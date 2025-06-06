@@ -18,14 +18,17 @@ from data_observatory_test_062025.load_data_viviendas import load_data_viviendas
 from data_observatory_test_062025.generic_eda_report import generic_report
 
 
+# Cargamos las viviendas
+
 df_viviendas = load_data_viviendas()
 
+
+# eda generico para sacarlo de encima rápido, y tenerlo como referencia
 
 generic_report(df_viviendas)
 
 
-
-
+# Es un dataset bien regular, sin datos faltantes, aunque igual hay que revusar
 
 # No me parece bien empezar el análisis de coherencia sin antes estandarizar y deduplicar la información
 
@@ -111,6 +114,8 @@ for col in ['agua_potable', 'electricidad', 'gas_natural', 'internet', 'telefono
     display(df_viviendas[col].unique())
 
 
+# Aquí de vamos a pasar todo a booleano por preferencia personal. Ahora, me llama la atención que los servicios bpásicos están completamente limpios
+
 boolean_columns = ['agua_potable', 'electricidad', 'gas_natural', 'internet', 'telefono_fijo', 'vehiculo_propio']
 # Make them booleans
 df_viviendas[boolean_columns] = df_viviendas[boolean_columns].applymap(lambda x: x == 'Sí')
@@ -184,13 +189,15 @@ df_viviendas['material_techo_limpia'] = df_viviendas['material_techo_limpia'].st
 df_viviendas['material_techo_limpia'].unique()
 
 
+# __A estas alturas ya deberíamos haber creado una función para hacer esta limpieza__
 
-
+# 
 
 display(df_viviendas['jefe_hogar_sexo'].unique())
 display(df_viviendas['jefe_hogar_educacion'].unique())
 
 
+# Aquí hicimos el paso final, que es reemplazar todas las variables intervenidas con sus nombre originales
 df_viviendas['comuna'] = df_viviendas['comuna_limpia']
 df_viviendas = df_viviendas.drop(columns=['comuna_limpia'])
 df_viviendas['tipo_vivienda'] = df_viviendas['tipo_vivienda_limpia']
@@ -201,6 +208,8 @@ df_viviendas['material_techo'] = df_viviendas['material_techo_limpia']
 df_viviendas = df_viviendas.drop(columns=['material_techo_limpia'])
 
 
+
+# 
 
 df_viviendas.columns
 
@@ -220,15 +229,6 @@ df_viviendas.columns
 # 
 
 print("\n--- 2.1.1. Análisis de Coherencia Interna ---")
-
-# --- 1. Coherencia Demográfica: Total Personas vs. Desglose ---
-print("\nValidando consistencia demográfica...")
-
-# A) Personas vs. Género
-df_viviendas['suma_genero'] = df_viviendas['num_hombres'] + df_viviendas['num_mujeres']
-inconsistencia_genero = df_viviendas[df_viviendas['num_personas_hogar'] != df_viviendas['suma_genero']]
-print(f"Problema 1: 'num_personas_hogar' no coincide con la suma de 'hombres' y 'mujeres'.")
-print(f"Registros afectados: {len(inconsistencia_genero)}")
 
 
 
@@ -448,8 +448,8 @@ df_indicadores['indice_masculinidad'] = df_indicadores['indice_masculinidad'].re
 
 # C) Porcentaje de población por grupo etario por hogar
 df_indicadores["porc_menores_18"] = df_indicadores["num_menores_18"] / df_indicadores["num_personas_hogar"] * 100
-df_indicadores["num_adultos_18_64"] = df_indicadores["num_adultos_18_64"] / df_indicadores["num_personas_hogar"] * 100
-df_indicadores["num_adultos_65_plus"] = df_indicadores["num_adultos_65_plus"] / df_indicadores["num_personas_hogar"] * 100
+df_indicadores["porc_adultos_18_64"] = df_indicadores["num_adultos_18_64"] / df_indicadores["num_personas_hogar"] * 100
+df_indicadores["porc_adultos_65_plus"] = df_indicadores["num_adultos_65_plus"] / df_indicadores["num_personas_hogar"] * 100
 
 # D) Ingreso per cápita
 df_indicadores['ingreso_per_capita'] = df_indicadores['ingreso_mensual_hogar'] / df_indicadores['num_personas_hogar']
@@ -559,6 +559,7 @@ for col in ["tipo_vivienda", "material_paredes", "material_techo"]:
 
 
 # tamaño de las viviendas segun su año de construccion
+df_indicadores
 
 
 df_indicadores.to_csv(INTERIM_DATA_DIR / "indicadores_vivienda_interim.csv")

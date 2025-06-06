@@ -1,10 +1,25 @@
 # data_observatory_test_062025
 
+## Bienvenido
+
+Bienvenido a la postulación de Felipe Cabello.
+
+M
+
+
+
+
+
 <a target="_blank" href="https://cookiecutter-data-science.drivendata.org/">
     <img src="https://img.shields.io/badge/CCDS-Project%20template-328F97?logo=cookiecutter" />
 </a>
 
 A data science project for the data scientist position in Data Observatory.
+
+
+
+
+
 
 ## Project Organization
 

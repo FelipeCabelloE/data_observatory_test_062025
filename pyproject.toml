@@ -16,6 +16,7 @@ classifiers = [
     "License :: OSI Approved :: MIT License"
 ]
 dependencies = [
+    "catboost>=1.2.8",
     "jupyterlab>=4.4.3",
     "loguru",
     "nbautoexport>=0.5.2",
