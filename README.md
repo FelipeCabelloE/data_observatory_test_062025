@@ -1,4 +1,6 @@
 # data_observatory_test_062025
+_A data science project for the data scientist position in Data Observatory._
+
 
 ## Bienvenido
 
@@ -18,37 +20,32 @@ Para instalar uv sigue las instrucciones de la [página](https://docs.astral.sh/
 
 o utiliza este comando:
 
-´´´
+
+```
 curl -LsSf https://astral.sh/uv/install.sh | sh
-´´´ 
+``` 
 Una vez instalado, todo es bastante simple.
 
 ## Instalación
 
-simplemente corre "uv sync"
+simplemente corre ```uv sync```
 
-Luego puedes correr "uv run jupyter lab" e ir a la carpeta "./notebooks" y ver mis respuestas :)
+Luego puedes correr ```uv run jupyter lab``` e ir a la carpeta [./notebooks](https://github.com/FelipeCabelloE/data_observatory_test_062025/tree/master/notebooks) y ver mis respuestas :)
 
 
 ## Usos alternativos
 
-Este repositorio también hace uso de la herramienta "make"
+Este repositorio también hace uso de la herramienta ```make```
 
-así que también puedes correr "make requirements" para instalar el proyecto, y luego "make create_environment"
+así que también puedes correr ```make requirements``` para instalar el proyecto, y luego ```make create_environment```
 
-despues es solo un tema de activar python (source .venv/bin/activate) y correr jupyter lab.
+despues es solo un tema de activar python (```source .venv/bin/activate```) y correr ```jupyter lab```.
 
 Espero esté todo claro. Si tienes dudas, me puedes contactar!
 
+## Nota importante
 
-
-
-<a target="_blank" href="https://cookiecutter-data-science.drivendata.org/">
-    <img src="https://img.shields.io/badge/CCDS-Project%20template-328F97?logo=cookiecutter" />
-</a>
-
-A data science project for the data scientist position in Data Observatory.
-
+Las respuestas están en la carpeta [./notebooks](https://github.com/FelipeCabelloE/data_observatory_test_062025/tree/master/notebooks). Hay una carpeta con un intento fallido de la pregunta 3, pero no me gustó el resultado ni el acercamiento, así que lo dejé como referencia, pero no correspnde a mi respuesta oficial. Las únicas respuestas válidas están en la base de la carpeta. Los otros directorios son solo de referencia.
 
 
 
@@ -104,6 +101,9 @@ A data science project for the data scientist position in Data Observatory.
     │
     └── plots.py                <- Code to create visualizations
 ```
+<a target="_blank" href="https://cookiecutter-data-science.drivendata.org/">
+    <img src="https://img.shields.io/badge/CCDS-Project%20template-328F97?logo=cookiecutter" />
+</a>
 
 --------
 
