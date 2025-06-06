@@ -2,10 +2,43 @@
 
 ## Bienvenido
 
-Bienvenido a la postulación de Felipe Cabello.
+Bienvenido a la postulación de Felipe Cabello :).
 
-M
+En la sección de "Project Organization" podras ver la organización general de esta Repo.
 
+## __Mis respuestas están en la carpeta ./notebooks__
+
+## Gettign started
+
+Si quieres reproducir los resultados que obtuve debes considerar lo siguiente.
+
+Este proyecto usa principalmente la herramienta [uv](https://docs.astral.sh/uv/getting-started/installation/) de astral para funcionar. Por lo tanto, deberías tener instalada esta herramienta antes de comenzar.
+
+Para instalar uv sigue las instrucciones de la [página](https://docs.astral.sh/uv/getting-started/installation/)
+
+o utiliza este comando:
+
+´´´
+curl -LsSf https://astral.sh/uv/install.sh | sh
+´´´ 
+Una vez instalado, todo es bastante simple.
+
+## Instalación
+
+simplemente corre "uv sync"
+
+Luego puedes correr "uv run jupyter lab" e ir a la carpeta "./notebooks" y ver mis respuestas :)
+
+
+## Usos alternativos
+
+Este repositorio también hace uso de la herramienta "make"
+
+así que también puedes correr "make requirements" para instalar el proyecto, y luego "make create_environment"
+
+despues es solo un tema de activar python (source .venv/bin/activate) y correr jupyter lab.
+
+Espero esté todo claro. Si tienes dudas, me puedes contactar!
 
 
 

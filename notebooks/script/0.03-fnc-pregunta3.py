@@ -193,7 +193,7 @@ print(classification_report(y_test, y_pred_class, target_names=['Sin Hacinamient
 # 
 # 2. La calidad de los datos limita la calidad del modelo. Con mejores datos, tendremos un modelo más robusto
 # 
-# 3. La definición del umbral es un punto crítico en este análsis. Si este no es apropiado, todo el modelo queda comprometido.
+# 3. La definición del umbral es un punto crítico en este análsis. Si este no es apropiado, el modelo queda comprometido.
 # 
 # 
 
